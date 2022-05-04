@@ -1,9 +1,17 @@
 local functions = {}
+
 functions.teleportPartToPart = function(tppart,part,offset)
-	tppart.CFrame = part.CFrame * offset
+		tppart.CFrame = part.CFrame * offset
 end
-functions.getNearestPartFromPart = function(part,folder)
-	print("WIP")
+
+functions.getNearestPartFromPartsTable = function(part,folder)
+		local nearest = nil
+		for i,v in pairs(folder) do
+				if nearest == nil or (part.Position - v.Position).Magnitude < (part.Position - nearest.Position).Magnitude then
+						nearest = v
+				end
+		end
+		return nearest
 end
 
 return functions
