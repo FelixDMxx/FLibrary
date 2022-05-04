@@ -1,0 +1,7 @@
+local functions = {
+	teleportPartToPart = function(tppart,part,offset)
+		tppart.CFrame = part.CFrame * offset
+	end;
+}
+
+return functions
