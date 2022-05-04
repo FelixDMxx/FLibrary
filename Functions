@@ -1,10 +1,9 @@
-local functions = {
-	teleportPartToPart = function(tppart,part,offset)
-		tppart.CFrame = part.CFrame * offset
-	end;
-	getNearestPartFromPart = function(part,folder)
-		print("WIP")
-	end;
-}
+local functions = {}
+functions.teleportPartToPart = function(tppart,part,offset)
+	tppart.CFrame = part.CFrame * offset
+end
+functions.getNearestPartFromPart = function(part,folder)
+	print("WIP")
+end
 
 return functions
