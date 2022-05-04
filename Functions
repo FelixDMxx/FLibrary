@@ -6,3 +6,5 @@ local functions = {
 		print("WIP")
 	end;
 }
+
+return functions
