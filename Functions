@@ -3,5 +3,3 @@ local functions = {
 		tppart.CFrame = part.CFrame * offset
 	end;
 }
-
-return functions
