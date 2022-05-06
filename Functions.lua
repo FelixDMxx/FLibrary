@@ -1,7 +1,7 @@
 local functions = {}
 
 functions.teleportPartToPart = function(tppart,part,offset)
-    tppart.CFrame = part.CFrame * CFrame.new(offset)
+    tppart.CFrame = part.CFrame * offset
 end
 
 functions.getNearestPartFromPartsTable = function(part,table)
