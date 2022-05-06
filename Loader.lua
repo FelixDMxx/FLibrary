@@ -49,6 +49,11 @@ local function loadFunctions()
     local success = pcall(function()
         _G.FLib["Functions"] = loadstring(game:HttpGet("https://raw.githubusercontent.com/FelixDMxx/FLibrary/main/Functions.lua",true))()
     end)
-    if not success then game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "Couldn't load functions, retrying."});loadFunctions() end
+    if not success then 
+        game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "Couldn't load functions, retrying."})
+        loadFunctions()
+    else
+        game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "Loaded functions, you can use them now."})
+    end
 end
 loadFunctions()
