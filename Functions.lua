@@ -11,6 +11,7 @@ functions.getNearestPartFromPartsTable = function(part,table)
 			nearest = v
 		end
 	end
+    t
 	return nearest
 end
 
