@@ -43,7 +43,11 @@ local success = pcall(function()
     end
 end)
 
-if not success then game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "One or more custom functions have errored, custom functions deactivated."}) end
+if not success then 
+    game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "One or more custom functions have errored, custom functions deactivated."}) 
+else
+    game.StarterGui:SetCore("SendNotification", {Title = "FLibrary";Text = "Successfully loaded custom functions, you can use them now (with _G.FLib.CustomFunctions)."}) 
+end
 
 local function loadFunctions()
     local success = pcall(function()
@@ -53,7 +57,7 @@ local function loadFunctions()
         game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "Couldn't load functions, retrying."})
         loadFunctions()
     else
-        game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "Loaded functions, you can use them now."})
+        game.StarterGui:SetCore("SendNotification", {Title = "FLibrary";Text = "Successfully loaded functions, you can use them now (with _G.FLib.Functions)."})
     end
 end
 loadFunctions()
