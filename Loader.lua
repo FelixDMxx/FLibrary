@@ -44,9 +44,9 @@ local success = pcall(function()
 end)
 
 if not success then 
-    game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "One or more custom functions have errored, custom functions deactivated.";Icon = "rbxassetid://9569021307";Duration = 10}) 
+    game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "One or more custom functions have errored, custom functions deactivated.";Icon = "rbxassetid://9568997684";Duration = 10}) 
 else
-    game.StarterGui:SetCore("SendNotification", {Title = "FLibrary";Text = "Successfully loaded custom functions, you can use them now (with _G.FLib.CustomFunctions).";Icon = "rbxassetid://9569021307";Duration = 10}) 
+    game.StarterGui:SetCore("SendNotification", {Title = "FLibrary";Text = "Successfully loaded custom functions, you can use them now (with _G.FLib.CustomFunctions).";Icon = "rbxassetid://9568997684";Duration = 10}) 
 end
 
 local function loadFunctions()
@@ -54,10 +54,10 @@ local function loadFunctions()
         _G.FLib["Functions"] = loadstring(game:HttpGet("https://raw.githubusercontent.com/FelixDMxx/FLibrary/main/Functions.lua",true))()
     end)
     if not success then 
-        game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "Couldn't load functions, retrying.";Icon = "rbxassetid://9569021307";Duration = 10})
+        game.StarterGui:SetCore("SendNotification", {Title = "Error";Text = "Couldn't load functions, retrying.";Icon = "rbxassetid://9568997684";Duration = 10})
         loadFunctions()
     else
-        game.StarterGui:SetCore("SendNotification", {Title = "FLibrary";Text = "Successfully loaded functions, you can use them now (with _G.FLib.Functions).";Icon = "rbxassetid://9569021307";Duration = 10})
+        game.StarterGui:SetCore("SendNotification", {Title = "FLibrary";Text = "Successfully loaded functions, you can use them now (with _G.FLib.Functions).";Icon = "rbxassetid://9568997684";Duration = 10})
     end
 end
 loadFunctions()
